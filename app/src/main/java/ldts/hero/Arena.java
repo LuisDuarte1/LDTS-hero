@@ -101,6 +101,7 @@ public class Arena {
     private void moveMonsters(){
         for (Monster monster : monsters) {
             monster.setPosition(monster.move(hero.getPosition()));
+            checkMonsterCollisions();
         }
     }
 
