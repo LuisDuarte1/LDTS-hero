@@ -92,14 +92,16 @@ public class Arena {
     private void checkMonsterCollisions(){
         for (Monster monster : monsters) {
             if(monster.getPosition().equals(hero.getPosition())){
-                System.out.println("An monster hit you :( you lost.");
+                System.out.println("A monster hit you :( you lost.");
                 coins = new ArrayList<Coin>();
             }
         }
     }
     
     private void moveMonsters(){
+        Random random = new Random();
         for (Monster monster : monsters) {
+            if(random.nextInt(9) % 2 == 0) continue;
             monster.setPosition(monster.move(hero.getPosition()));
             checkMonsterCollisions();
         }
