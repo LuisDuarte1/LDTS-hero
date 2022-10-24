@@ -18,7 +18,7 @@ public class Arena {
 
     private int width;
     private int height;
-    private Hero hero = null;
+    private Hero hero;
     private List<Wall> walls;
     private List<Coin> coins;
     private List<Monster> monsters;
@@ -112,15 +112,15 @@ public class Arena {
             moveHero(hero.getPosition().moveUp());
             moveMonsters();
         }
-        if(key.getKeyType() == KeyType.ArrowDown){
+        else if(key.getKeyType() == KeyType.ArrowDown){
             moveHero(hero.getPosition().moveDown());
             moveMonsters();
         }
-        if(key.getKeyType() == KeyType.ArrowLeft){
+        else if(key.getKeyType() == KeyType.ArrowLeft){
             moveHero(hero.getPosition().moveLeft());
             moveMonsters();
         }
-        if(key.getKeyType() == KeyType.ArrowRight){
+        else if(key.getKeyType() == KeyType.ArrowRight){
             moveHero(hero.getPosition().moveRight());
             moveMonsters();
         }

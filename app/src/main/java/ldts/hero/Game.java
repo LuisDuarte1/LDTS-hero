@@ -18,15 +18,16 @@ public class Game {
     private static int Y_SIZE = 20;
 
 
-    private Terminal terminal = null;
-    private static Screen screen = null;
-    private static TerminalSize terminalSize = new TerminalSize(X_SIZE,Y_SIZE);
+    private Terminal terminal;
+    private static Screen screen;
+    private static TerminalSize terminalSize;
 
-    private TextGraphics graphics = null;
-    private Arena arena = null;
+    private TextGraphics graphics;
+    private Arena arena;
     
 
     Game() throws IOException{
+        terminalSize = new TerminalSize(X_SIZE,Y_SIZE);
         DefaultTerminalFactory defaultTerminalFactory = new DefaultTerminalFactory().setInitialTerminalSize(terminalSize);
         terminal = defaultTerminalFactory.createTerminal();
         screen = new TerminalScreen(terminal);

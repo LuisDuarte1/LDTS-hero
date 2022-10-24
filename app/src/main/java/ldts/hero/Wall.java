@@ -15,7 +15,6 @@ public class Wall extends Element{
 
     @Override
     public void setPosition(Position _pos){}
-
     public void draw(TextGraphics graphics){
         graphics.setBackgroundColor(TextColor.Factory.fromString("#0000FF"));
         graphics.enableModifiers(SGR.BOLD);
